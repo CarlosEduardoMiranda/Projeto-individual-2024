@@ -1,0 +1,96 @@
+
+* {
+  margin:0;
+	padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url(../assets/imgs/Coringao.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -1920px;
+  
+}
+
+/* Style do header com background e padding pra posicionamento */
+.header {
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;
+  margin: 0;
+  font-family: "Dosis", sans-serif;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Style dos links do header */
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  font-weight: bold;
+
+}
+
+.header-right a:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+/* Background-color muda com mouse por cima */
+.header-left a:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+/* Gradient brilho
+.card {
+  background: #0C2626;
+  padding: 3px;
+  position: relative;
+  border-radius: 15px;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: "Dosis", sans-serif;
+} */
+
+/* .card a:hover {
+  color: #0C2626;
+  background-color: rgb(255 184 0 / 100%);
+  border-radius: 15px;
+  transition: color 1s;
+}
+.card a:hover:before, .card a:hover:after {
+  animation: none;
+  opacity: 0;
+} */
+
+/* 
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #ffe087, #ffb800 43%, #CC9918);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+} */
