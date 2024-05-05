@@ -6,23 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="../public/css/login.css">
-    <title>signin-signup</title>
+    <title>Login/Cadastro</title>
 </head>
 <body>
     <div class="container">
-        <div class="login-cadastro">
-            <form action="" class="formulario-login">
-                <h2 class="titulo">Bem-vindo! Corinthiano(a)!</h2>
+        <div class="signin-signup">
+            <form action="" class="sign-in-form">
+                <h2 class="title">Olá, Torcedor Corinthiano!</h2>
                 <div class="input-field">
-                    <i class="Usuario"></i>
-                    <input type="text" placeholder="Nome">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username">
                 </div>
                 <div class="input-field">
-                    <i class="lock"></i>
-                    <input type="password" placeholder="Senha">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
                 </div>
                 <input type="submit" value="Login" class="btn">
-                <p class="texto-social">Ou faça login</p>
+                <!-- <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div> -->
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
+            </form>
+            <form action="" class="sign-up-form">
+                <h2 class="title">Cadastro</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Sign up" class="btn">
+                <!-- <p class="social-text">Or Sign in with social platform</p> -->
                 <!-- <div class="social-media">
                     <a href="#" class="social-icon">
                         <i class="fab fa-facebook"></i>
@@ -37,38 +69,28 @@
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div> -->
-                <p class="account-text">Não tem uma conta? <a href="#" id="sign-up-btn2">Cadastre - se</a></p>
-            </form>
-            <form action="" class="inscrevase-formluario">
-                <h2 class="title">Increva-se</h2>
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Username">
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Email">
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password">
-                </div>
-                <input type="submit" value="Sign up" class="btn">
-                <p class="social-text">Seja mais um no bando de loucos</p>
-                <div class="social-media">
-                    <!-- <a href="#" class="social-icon">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a> -->
-                </div>
-                <p class="account-text">Ja tem uma conta? <a href="#" id="sign-in-btn2">Increva-se</a></p>
+                <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Fazer Cadastro</a></p>
             </form>
         </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Ja é um Fiel Torcedor?</h3>
+                    <p>Vá para a tela de Login</p>
+                    <button class="btn" id="sign-in-btn">Login</button>
+                </div>
+                <img src="signin.svg" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Orgulho que nem todos podem ter!</h3>
+                    <p>Ainda não é do Bando de Loucos?</p>
+                    <button class="btn" id="sign-up-btn">Cadastre-se</button>
+                </div>
+                <img src="signup.svg" alt="" class="image">
+            </div>
+        </div>
+    </div>
+    <script src="../public/js/login.js"></script>
+</body>
+</html>
