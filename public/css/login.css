@@ -52,6 +52,20 @@ form {
     min-width: 238px;
     padding: 0 10px;
 }
+
+.logo-img{
+    width: 120px;
+    position: relative;
+    left: 44.5%;
+    z-index: 10;
+    top: 20px;
+    animation: descer_logo 1s;
+}
+@keyframes descer_logo {
+    0%{transform: translateY(-100px); opacity: 0%;}
+    100%{transform: translateX(0); opacity: 100%;}
+}
+
 form.sign-in-form {
     opacity: 1;
     transition: 0.5s ease-in-out;
