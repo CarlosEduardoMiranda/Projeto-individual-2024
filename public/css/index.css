@@ -1,117 +1,43 @@
-
-* {
-  margin:0;
-	padding:0;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: 'minha fonte';
-  src: url(https://www.dafont.com/pt/modric-2.font);
-}
-
-body {
+body, html {
+  height: 100%;
   margin: 0;
-  background-image: url(../assets/imgs/Coringao.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: -1920px;
-  background-attachment: fixed;
+  font-family: Arial, sans-serif;
 }
 
-/* Style do header com background e padding pra posicionamento */
-.header {
-  overflow: hidden;
-  background-color: black;
-  padding: 20px 10px;
-  margin: 0;
-  font-family: "Dosis", sans-serif;
-  z-index: 2;
-  width: 100%;
-  justify-content: space-around;
-  display: flex;
-  flex-direction: row;
-}
-
-/* Style dos links do header */
-.header a {
-  float: left;
-  color: rgb(255, 255, 255);
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-  font-weight: bold;
-
-}
-
-.header-right a:hover {
-  background-color: #000000;
-  color: #ffffff;
-  transition: 0.5s;
-  font-size: 20px;
-}
-
-/* Background-color muda com mouse por cima */
-.header-left a:hover {
-  background-color: #000000;
-  color: #ffffff;
-  transition: 0.5s;
-  font-size: 20px;
-}
-
-.logo-img{
-  display: flex;
-  justify-content: center;
-  height: 80px;
-}
-
-.texto{
-  margin-left: 250px;
-  margin-top: 250px;
-  color: #ffffff;
-font-weight: bold;
-font-family: 'minha fonte';
-}
-
-
-/* Gradient brilho
-.card {
-  background: #0C2626;
-  padding: 3px;
+.bg-video {
   position: relative;
-  border-radius: 15px;
-  color: rgb(88 199 250 / 0%);
-  cursor: pointer;
-  font-family: "Dosis", sans-serif;
-} */
-
-/* .card a:hover {
-  color: #0C2626;
-  background-color: rgb(255 184 0 / 100%);
-  border-radius: 15px;
-  transition: color 1s;
+  width: 100%;
+  height: 100vh; /* Full height */
+  overflow: hidden;
 }
-.card a:hover:before, .card a:hover:after {
-  animation: none;
-  opacity: 0;
-} */
 
-/* 
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate)
-    , #ffe087, #ffb800 43%, #CC9918);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-} */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
 
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
 
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
