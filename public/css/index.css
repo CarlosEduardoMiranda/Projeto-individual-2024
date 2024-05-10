@@ -28,9 +28,9 @@ section,
 footer{
     /* padding: 54px 0; */
     color: rgb(0, 0, 0);
-    padding: 50px;
-    animation-duration: 3s;
-   animation-name: slidein;
+    padding: 160px;
+    /* animation-duration: 3s;
+   animation-name: slidein; */
    font-weight: bold;
    /* animation-iteration-count: infinite; */
 }
@@ -40,7 +40,8 @@ h3{
 }
 
 p{
-  color: white;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
 }
 
 .container{
@@ -68,7 +69,7 @@ nav ul a{
   font-size: 18px;
   display: block;
   animation-duration: 3s;
-  animation-name: slideright;
+  animation-name: slidein;
 }
 
 nav ul a::after{
@@ -124,6 +125,7 @@ nav ul a:hover::after{
   color: white;
   font-weight: bold;
   margin-right: 800px;
+  margin-bottom: 20px;
 }
 
 .banner .banner-text p{
@@ -147,12 +149,79 @@ nav ul a:hover::after{
   
 }
 
-@keyframes slideright{
-  from {
-    margin-right: 100%;
-    width: 300%;
-  }to {
-    margin-right: 0%;
-    width: 100%;
-  }
+/* Primeira parte Branca  */
+.faca-mais .container{
+  display: flex;
+  align-items: center;
 }
+
+.faca-mais .faca-mais-text{
+  width: 50%;
+  padding: 0 40px;
+}
+
+.faca-mais .faca-mais-text h3{
+    font-size: 56px;
+}
+
+.faca-mais .faca-mais-text p{
+  margin: 30px 10px 30px 10px;
+}
+
+.faca-mais .faca-mais-img{
+  width: 50%;
+}
+
+.faca-mais .faca-mais-img img{
+  width: 100%;
+}
+
+
+
+.faca-mais2 .container{
+  display: flex;
+  align-items: center;
+}
+
+.faca-mais2{
+  color: rgb(255, 255, 255);
+  padding: 170px;
+  background-color: black;
+}
+
+.faca-mais2 .faca-mais-text{
+  width: 50%;
+  padding: 0 40px;
+}
+
+.faca-mais2 .faca-mais-text h3{
+    font-size: 56px;
+}
+
+.faca-mais2 .faca-mais-text p{
+  margin: 30px 10px 30px 10px;
+  color: white;
+}
+
+.faca-mais2 .faca-mais-img{
+  width: 50%;
+}
+
+.faca-mais2 .faca-mais-img img{
+  width: 100%;
+}
+
+.btn2{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.1s;
+}
+
+
+
+
+
