@@ -177,7 +177,7 @@ nav ul a:hover::after{
 }
 
 
-
+/* Primeira parte preta */
 .faca-mais2 .container{
   display: flex;
   align-items: center;
@@ -218,8 +218,92 @@ nav ul a:hover::after{
   border-radius: 10px;
   cursor: pointer;
   display: inline-block;
-  transition: 0.1s;
 }
+/* 
+.wrapper{
+  background-color: white;
+   color: rgb(255, 255, 255); 
+  padding: 170px;
+  width: 100%;
+  background-color: black;
+} */
+
+.final{
+  background-color: white;
+  /* margin-top: 90px; */
+}
+
+footer img{
+  width: 150px
+  ;
+}
+
+footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  /* margin-bottom: 3.2rem; */
+
+}
+
+ 
+
+footer .col {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2rem;
+
+}
+
+ 
+
+footer .col li:first-child {
+
+  color: rgb(0, 0, 0);
+
+  cursor: pointer;
+
+}
+
+
+footer .col li a:hover {
+
+  opacity: 1;
+
+  color: black;
+  cursor: pointer;
+
+}
+
+
+ 
+
+footer .col li a:hover svg path {
+
+  stroke-opacity: 1;
+
+ color: black;
+ cursor: pointer;
+
+}
+
+ 
+
+footer .col .social-media {
+
+  display: flex;
+
+  gap: 1.5rem;
+  cursor: pointer;
+
+}
+
+
 
 
 
