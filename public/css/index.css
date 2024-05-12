@@ -1,69 +1,69 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
 
-body{
+body {
   background-color: rgb(255, 255, 255);
 }
 
-header{
+header {
   background-image: url(../assets/imgs/socrates\ democracia.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-position-y: -900px;
   /* max-width: 900px; */
-  
+
 }
 
-img{
+img {
   margin-top: 20px;
   width: 110px;
 }
 
 section,
-footer{
-    /* padding: 54px 0; */
-    color: rgb(0, 0, 0);
-    padding: 160px;
-    /* animation-duration: 3s;
+footer {
+  /* padding: 54px 0; */
+  color: rgb(0, 0, 0);
+  padding: 160px;
+  /* animation-duration: 3s;
    animation-name: slidein; */
-   font-weight: bold;
-   /* animation-iteration-count: infinite; */
+  font-weight: bold;
+  /* animation-iteration-count: infinite; */
 }
 
-h3{
-    font-size: 50px;
+h3 {
+  font-size: 50px;
 }
 
-p{
+p {
   color: rgb(0, 0, 0);
   font-size: 22px;
 }
 
-.container{
+.container {
   max-width: 1400px;
-  margin:0 auto;
+  margin: 0 auto;
   padding: 0 5%;
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 30px;
 }
 
-nav ul{
+nav ul {
   display: flex;
   align-items: center;
 }
 
-nav ul a{
-  color:white;
+nav ul a {
+  color: white;
   margin: 0 25px;
   text-transform: uppercase;
   font-size: 18px;
@@ -72,7 +72,7 @@ nav ul a{
   animation-name: slidein;
 }
 
-nav ul a::after{
+nav ul a::after {
   content: '';
   background-color: rgb(0, 0, 0);
   height: 3px;
@@ -82,11 +82,11 @@ nav ul a::after{
   margin: 0 auto;
 }
 
-nav ul a:hover::after{
+nav ul a:hover::after {
   width: 100%;
-} 
+}
 
-.btn{
+.btn {
   background-color: black;
   color: white;
   padding: 15px 20px;
@@ -96,31 +96,32 @@ nav ul a:hover::after{
   transition: 0.1s;
 }
 
-.btn.animate-btn{
-  animation: animate-outline 1s ease-in-out infinite;  
+.btn.animate-btn {
+  animation: animate-outline 1s ease-in-out infinite;
 }
 
-@keyframes animate-outline{
-  from{
+@keyframes animate-outline {
+  from {
     outline: 0px solid white;
   }
-  to{
+
+  to {
     outline: 15px solid black;
   }
 }
 
-.banner{
+.banner {
   display: flex;
   justify-content: center;
 }
 
-.banner .banner-text{
+.banner .banner-text {
   margin: 150px;
   text-align: center;
   padding: 0 90px;
 }
 
-.banner .banner-text h1{
+.banner .banner-text h1 {
   font-size: 96px;
   color: white;
   font-weight: bold;
@@ -128,90 +129,92 @@ nav ul a:hover::after{
   margin-bottom: 20px;
 }
 
-.banner .banner-text p{
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    font-weight: lighter;
-    margin-top: 18px 0;
-    font-weight: bold;
-    margin-right: 800px;
+.banner .banner-text p {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  font-weight: lighter;
+  margin-top: 18px 0;
+  font-weight: bold;
+  margin-right: 800px;
 }
 
 @keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
-  }to {
+  }
+
+  to {
     margin-left: 0%;
     width: 100%;
   }
 
-  
+
 }
 
 /* Primeira parte Branca  */
-.faca-mais .container{
+.faca-mais .container {
   display: flex;
   align-items: center;
 }
 
-.faca-mais .faca-mais-text{
+.faca-mais .faca-mais-text {
   width: 50%;
   padding: 0 40px;
 }
 
-.faca-mais .faca-mais-text h3{
-    font-size: 56px;
+.faca-mais .faca-mais-text h3 {
+  font-size: 56px;
 }
 
-.faca-mais .faca-mais-text p{
+.faca-mais .faca-mais-text p {
   margin: 30px 10px 30px 10px;
 }
 
-.faca-mais .faca-mais-img{
+.faca-mais .faca-mais-img {
   width: 50%;
 }
 
-.faca-mais .faca-mais-img img{
+.faca-mais .faca-mais-img img {
   width: 100%;
 }
 
 
 /* Primeira parte preta */
-.faca-mais2 .container{
+.faca-mais2 .container {
   display: flex;
   align-items: center;
 }
 
-.faca-mais2{
+.faca-mais2 {
   color: rgb(255, 255, 255);
   padding: 170px;
   background-color: black;
 }
 
-.faca-mais2 .faca-mais-text{
+.faca-mais2 .faca-mais-text {
   width: 50%;
   padding: 0 40px;
 }
 
-.faca-mais2 .faca-mais-text h3{
-    font-size: 56px;
+.faca-mais2 .faca-mais-text h3 {
+  font-size: 56px;
 }
 
-.faca-mais2 .faca-mais-text p{
+.faca-mais2 .faca-mais-text p {
   margin: 30px 10px 30px 10px;
   color: white;
 }
 
-.faca-mais2 .faca-mais-img{
+.faca-mais2 .faca-mais-img {
   width: 50%;
 }
 
-.faca-mais2 .faca-mais-img img{
+.faca-mais2 .faca-mais-img img {
   width: 100%;
 }
 
-.btn2{
+.btn2 {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   padding: 15px 20px;
@@ -219,93 +222,190 @@ nav ul a:hover::after{
   cursor: pointer;
   display: inline-block;
 }
-/* 
-.wrapper{
-  background-color: white;
-   color: rgb(255, 255, 255); 
-  padding: 170px;
-  width: 100%;
-  background-color: black;
-} */
 
-.final{
+.elenco-titulo h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* carrosel */
+.slider{
+	position: relative;
+	width: 100%;
+  background: rgb(0, 0, 0);
+  /* background: radial-gradient(circle, rgba(0,0,0,1) 82%, rgba(255,255,255,1) 100%); */
+  background: linear-gradient(90deg, rgba(0,0,0,1) 18%, rgba(255,255,255,1) 100%);
+}
+.myslide{
+	height: 655px;
+	display: none;
+	overflow: hidden;
+}
+
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
+}
+.next{
+	right: 0;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+/* /2 */
+
+/* javascript */
+.active, .dot:hover{
+	border-color: #f60000; /* blue */
+}
+/* /javascript */
+
+/* muslide add fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+/* /muslide add fade */
+
+/* 3 */
+.txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 40%;
+	left: 15%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {left: 20%;}
+  to {left: 10%;}
+}
+
+
+@keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+.txt h1{
+	color: #ff0000; /* blue */
+	font-size: 50px;
+	margin-bottom: 70px;
+}
+.txt p{
+	font-weight: bold;
+	font-size: 20px;
+  color: white;
+}
+/* /3 */
+
+/* 4 */
+.img-slider{
+	transform: scale(1, 1);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 40s;
+    margin-left: 400px;
+    margin-top: 100px;
+}
+@-webkit-keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1, 1);}
+}
+
+
+@keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1, 1);}
+}
+/* /4 */
+
+
+/* começo do footer */
+.final {
   background-color: white;
   /* margin-top: 90px; */
 }
 
-footer img{
-  width: 150px
-  ;
+footer img {
+  width: 150px;
 }
 
 footer {
-
   display: flex;
-
   justify-content: space-between;
-
   /* margin-bottom: 3.2rem; */
-
 }
-
- 
 
 footer .col {
-
   display: flex;
-
   flex-direction: column;
-
   gap: 2rem;
-
 }
-
- 
 
 footer .col li:first-child {
-
   color: rgb(0, 0, 0);
-
   cursor: pointer;
-
 }
-
 
 footer .col li a:hover {
-
   opacity: 1;
-
   color: black;
   cursor: pointer;
-
 }
-
-
- 
 
 footer .col li a:hover svg path {
-
   stroke-opacity: 1;
-
- color: black;
- cursor: pointer;
-
+  color: black;
+  cursor: pointer;
 }
 
- 
-
 footer .col .social-media {
-
   display: flex;
-
   gap: 1.5rem;
   cursor: pointer;
 
 }
-
-
-
-
-
-
-
