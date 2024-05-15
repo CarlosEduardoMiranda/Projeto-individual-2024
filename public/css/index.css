@@ -5,6 +5,23 @@
   text-decoration: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Paytone+One&display=swap');
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.paytone-one-regular {
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
 body {
   background-color: rgb(255, 255, 255);
 }
@@ -70,6 +87,7 @@ nav ul a {
   display: block;
   animation-duration: 3s;
   animation-name: slidein;
+  font-family: "Paytone One", sans-serif;
 }
 
 nav ul a::after {
@@ -124,9 +142,10 @@ nav ul a:hover::after {
 .banner .banner-text h1 {
   font-size: 96px;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   margin-right: 800px;
   margin-bottom: 20px;
+  font-family: "Paytone One", sans-serif;
 }
 
 .banner .banner-text p {
@@ -136,6 +155,7 @@ nav ul a:hover::after {
   margin-top: 18px 0;
   font-weight: bold;
   margin-right: 800px;
+  font-family: "Archivo Black", sans-serif;
 }
 
 @keyframes slidein {
@@ -169,6 +189,9 @@ nav ul a:hover::after {
 
 .faca-mais .faca-mais-text p {
   margin: 30px 10px 30px 10px;
+  font-family: "Paytone One", sans-serif;
+  font-weight: lighter;
+  text-align: justify;
 }
 
 .faca-mais .faca-mais-img {
@@ -204,6 +227,8 @@ nav ul a:hover::after {
 .faca-mais2 .faca-mais-text p {
   margin: 30px 10px 30px 10px;
   color: white;
+  text-align: justify;
+  word-spacing: 1px;
 }
 
 .faca-mais2 .faca-mais-img {
@@ -370,42 +395,52 @@ nav ul a:hover::after {
   /* margin-top: 90px; */
 }
 
-footer img {
-  width: 150px;
+.footer img {
+  width: 100px;
+  height: 140px;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: space-between;
+  padding: 60px;
   /* margin-bottom: 3.2rem; */
 }
 
-footer .col {
+.footer .col {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  font-family: "Paytone One", sans-serif;
 }
 
-footer .col li:first-child {
+.footer .col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: "Paytone One", sans-serif;
+}
+
+.footer .col :first-child {
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
-footer .col li a:hover {
+.footer .col a:hover {
   opacity: 1;
   color: black;
   cursor: pointer;
 }
 
-footer .col li a:hover svg path {
+.footer .col a:hover svg path {
   stroke-opacity: 1;
   color: black;
   cursor: pointer;
 }
 
-footer .col .social-media {
+.footer .col .social-media {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   cursor: pointer;
 
 }
