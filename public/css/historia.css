@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Paytone+One&display=swap');
+  
+  .archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .paytone-one-regular {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  header {
+    background-image: url(../assets/imgs/corinthians\ Fundação.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: -945px;
+    /* max-width: 900px; */
+  
+  }
+  
+  img {
+    margin-top: 20px;
+    width: 110px;
+  }
+  
+  section,
+  footer {
+    /* padding: 54px 0; */
+    color: rgb(0, 0, 0);
+    padding: 160px;
+    /* animation-duration: 3s;
+     animation-name: slidein; */
+    font-weight: bold;
+    /* animation-iteration-count: infinite; */
+  }
+  
+  h3 {
+    font-size: 50px;
+  }
+  
+  p {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul a {
+    color: rgb(0, 0, 0);
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    animation-duration: 3s;
+    animation-name: slidein;
+    font-family: "Paytone One", sans-serif;
+  }
+  
+  nav ul a::after {
+    content: '';
+    background-color: rgb(0, 0, 0);
+    height: 3px;
+    width: 0%;
+    display: block;
+    transition: 0.3s;
+    margin: 0 auto;
+  }
+  
+  nav ul a:hover::after {
+    width: 100%;
+  }
+  
+  .btn {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+  }
+  
+  .btn.animate-btn {
+    animation: animate-outline 1s ease-in-out infinite;
+  }
+  
+  @keyframes animate-outline {
+    from {
+      outline: 0px solid white;
+    }
+  
+    to {
+      outline: 15px solid black;
+    }
+  }
+  
+  .banner {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .banner .banner-text {
+    /* margin: 150px; */
+    text-align: center;
+    padding: 0 90px;
+    /* margin-bottom: 50px; */
+  }
+  
+  .banner .banner-text h1 {
+    font-size: 96px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    margin-right: 800px;
+    margin-bottom: 20px;
+    font-family: "Paytone One", sans-serif;
+  }
+  
+  .banner .banner-text p {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    margin-top: 18px 0;
+    font-weight: bold;
+    margin-right: 800px;
+    font-family: "Archivo Black", sans-serif;
+  }
+  
