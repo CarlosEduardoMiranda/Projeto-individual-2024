@@ -43,7 +43,19 @@ body {
     justify-content: space-around;
     z-index: 5;
 }
-form {
+
+/* MUDAR */
+.sign-in-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    min-width: 238px;
+    padding: 0 10px;
+}
+
+.sign-up-form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,13 +78,13 @@ form {
     100%{transform: translateX(0); opacity: 100%;}
 }
 
-form.sign-in-form {
+.sign-in-form {
     opacity: 1;
     transition: 0.5s ease-in-out;
     transition-delay: 1s;
 }
-form.sign-up-form {
-    opacity: 0;
+.sign-up-form {
+    /* opacity: 0; */
     transition: 0.5s ease-in-out;
     transition-delay: 1s;
 }
@@ -176,7 +188,7 @@ a {
 .content {
     color: #fff;
     transition: 1.1s ease-in-out;
-    transition-delay: 0.5s;
+    transition-delay: 0s;
 }
 .panel h3 {
     font-size: 28px;
@@ -189,11 +201,12 @@ a {
 .image {
     width: 100%;
     transition: 1.1s ease-in-out;
-    transition-delay: 0.4s;
+    transition-delay: 0.5s;
 }
 .left-panel .image,
 .left-panel .content {
     transform: translateX(-200%);
+
 }
 .right-panel .image,
 .right-panel .content {
