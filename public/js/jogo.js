@@ -5,7 +5,7 @@ const timer = document.querySelector('.timer');
 const characters = [ 
   'Wesley',
   'Carlos Miguel',
-  'Cassio',
+  'Angel Romero',
   'Yuri Alberto',
   'Raniele',
   'Paulinho',

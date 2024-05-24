@@ -5,22 +5,8 @@
   text-decoration: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Paytone+One&display=swap');
 
-.archivo-black-regular {
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.paytone-one-regular {
-  font-family: "Paytone One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
+/* @import url('https://fonts.cdnfonts.com/css/br-segma'); */
 
 body {
   background-color: rgb(255, 255, 255);
@@ -33,6 +19,9 @@ header {
   background-attachment: fixed;
   background-position-y: -900px;
   /* max-width: 900px; */
+  background-color: #08080877;
+  background-blend-mode: multiply;
+  
 
 }
 
@@ -87,12 +76,12 @@ nav ul a {
   display: block;
   animation-duration: 3s;
   animation-name: slidein;
-  font-family: "Paytone One", sans-serif;
+  /* font-family: 'Urban Graffiti PERSONAL USE ONL'; */
 }
 
 nav ul a::after {
   content: '';
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   height: 3px;
   width: 0%;
   display: block;
@@ -146,7 +135,8 @@ nav ul a:hover::after {
   font-weight: 700;
   margin-right: 800px;
   margin-bottom: 20px;
-  font-family: "Paytone One", sans-serif;
+  font-family: 'Urban Graffiti PERSONAL USE ONL';
+  text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
 }
 
 .banner .banner-text p {
@@ -157,6 +147,8 @@ nav ul a:hover::after {
   font-weight: bold;
   margin-right: 800px;
   font-family: "Archivo Black", sans-serif;
+  text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
+  text-align: initial;
 }
 
 @keyframes slidein {
@@ -186,13 +178,14 @@ nav ul a:hover::after {
 
 .faca-mais .faca-mais-text h3 {
   font-size: 56px;
+  font-family: 'Urban Graffiti PERSONAL USE ONL';
 }
 
 .faca-mais .faca-mais-text p {
   margin: 30px 10px 30px 10px;
-  font-family: "Paytone One", sans-serif;
-  font-weight: lighter;
   text-align: justify;
+  font-family: 'BR Segma', sans-serif;
+
 }
 
 .faca-mais .faca-mais-img {
@@ -219,10 +212,12 @@ nav ul a:hover::after {
 .faca-mais2 .faca-mais-text {
   width: 50%;
   padding: 0 40px;
+
 }
 
 .faca-mais2 .faca-mais-text h3 {
   font-size: 56px;
+  font-family: 'Urban Graffiti PERSONAL USE ONL';
 }
 
 .faca-mais2 .faca-mais-text p {
@@ -230,7 +225,9 @@ nav ul a:hover::after {
   color: white;
   text-align: justify;
   word-spacing: 1px;
-}
+  font-family: 'BR Segma', sans-serif;
+
+} 
 
 .faca-mais2 .faca-mais-img {
   width: 50%;
@@ -282,7 +279,7 @@ nav ul a:hover::after {
 	user-select: none;
 }
 .prev:hover, .next:hover{
-	color: #00a7ff; /* blue */
+	color: #000000; /* blue */
 }
 .next{
 	right: 0;
@@ -347,6 +344,7 @@ nav ul a:hover::after {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  
 }
 
 @-webkit-keyframes posi {
@@ -364,6 +362,7 @@ nav ul a:hover::after {
 	color: #ffffff; /* blue */
 	font-size: 50px;
 	margin-bottom: 70px;
+  font-family: 'Urban Graffiti PERSONAL USE ONL';
 }
 .txt p{
 	font-weight: bold;
