@@ -307,7 +307,7 @@ nav ul a:hover::after {
 
 /* javascript */
 .active, .dot:hover{
-	border-color: #ffffff; /* blue */
+	border-color: #000000; /* blue */
 }
 /* /javascript */
 
@@ -380,7 +380,7 @@ nav ul a:hover::after {
   	animation-name: zoomin;
   	animation-duration: 40s;
     margin-left: 400px;
-    margin-top: 100px;
+    margin-bottom: 100px;
 }
 @-webkit-keyframes zoomin {
   from {transform: scale(1, 1);}
