@@ -239,3 +239,8 @@ a {
 .container.sign-up-mode .left-panel {
     pointer-events: all;
 }
+
+.logo-casa{
+    width: 50px;
+    cursor: pointer;
+}

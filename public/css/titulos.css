@@ -88,8 +88,9 @@
     font-size: 18px;
     display: block;
     animation-duration: 3s;
-    animation-name: slidein;
-    font-family: "Paytone One", sans-serif;
+    animation-name: slidedesc;
+    font-family: 'BR Segma', sans-serif;
+    text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
   }
   
   nav ul a::after {
@@ -129,6 +130,17 @@
       outline: 15px solid black;
     }
   }
+  @keyframes slidedesc {
+    from {
+        margin-top: -100%; /* Começa fora da tela acima */
+        opacity: 0; /* Invisível no início */
+    }
+
+    to {
+        margin-top: 0; /* Termina na posição normal */
+        opacity: 1; /* Totalmente visível */
+    }
+}
   
   .banner {
     display: flex;
@@ -148,7 +160,7 @@
     font-weight: 700;
     margin-right: 800px;
     margin-bottom: 20px;
-    font-family: "Paytone One", sans-serif;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
     text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
   }
   
@@ -159,7 +171,7 @@
     margin-top: 18px 0;
     font-weight: bold;
     margin-right: 800px;
-    font-family: "Archivo Black", sans-serif;
+    font-family: 'BR Segma', sans-serif;
     text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
   }
 
@@ -195,6 +207,7 @@
     transition: 2.5s;
     color: black;
     margin: 10px;
+    font-family: 'BR Segma', sans-serif;
   }
 
   .card p{

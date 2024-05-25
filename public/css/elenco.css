@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  
+  /* @import url('https://fonts.cdnfonts.com/css/br-segma'); */
+  
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  header {
+    background-image: url(../assets/imgs/romero-corinthians-x-nacional-sul-americana-2024-1280x720.webp);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: -900px;
+    /* max-width: 900px; */
+    background-color: #08080877;
+    background-blend-mode: multiply;
+    
+  
+  }
+  
+  img {
+    margin-top: 20px;
+    width: 110px;
+  }
+  
+  section,
+  footer {
+    /* padding: 54px 0; */
+    color: rgb(0, 0, 0);
+    padding: 160px;
+    /* animation-duration: 3s;
+     animation-name: slidein; */
+    font-weight: bold;
+    /* animation-iteration-count: infinite; */
+  }
+  
+  h3 {
+    font-size: 50px;
+  }
+  
+  p {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul a {
+    color: white;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    animation-duration: 2s;
+    animation-name: slidedesc;
+    /* font-family: 'Urban Graffiti PERSONAL USE ONL'; */
+    font-family: 'BR Segma', sans-serif;
+    animation-fill-mode: forwards;
+    gap: 5px;
+  }
+  
+  nav ul a::after {
+    content: '';
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    width: 0%;
+    display: block;
+    transition: 0.3s;
+    margin: 0 auto;
+  }
+  
+  nav ul a:hover::after {
+    width: 100%;
+  }
+  
+  .btn {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+  }
+  
+  .btn.animate-btn {
+    animation: animate-outline 1s ease-in-out infinite;
+  }
+  
+  @keyframes animate-outline {
+    from {
+      outline: 0px solid white;
+    }
+  
+    to {
+      outline: 15px solid black;
+    }
+  }
+  
+  .banner {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .banner .banner-text {
+    /* margin: 150px; */
+    text-align: center;
+    padding: 0 90px;
+    /* margin-bottom: 50px; */
+  }
+  
+  .banner .banner-text h1 {
+    font-size: 96px;
+    color: white;
+    font-weight: 700;
+    margin-right: 800px;
+    margin-bottom: 20px;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
+    text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
+  }
+  
+  .banner .banner-text p {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+    margin-top: 18px 0;
+    font-weight: bold;
+    margin-right: 800px;
+    font-family: 'BR Segma', sans-serif;
+    text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
+    text-align: initial;
+  }
+  
+  @keyframes slidedesc {
+    from {
+        margin-top: -100%; /* Começa fora da tela acima */
+        opacity: 0; /* Invisível no início */
+    }
+
+    to {
+        margin-top: 0; /* Termina na posição normal */
+        opacity: 1; /* Totalmente visível */
+    }
+}
+
+ .slide-card {
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container-jogadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .player-cards {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: #111;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+  } */
+  
+  .image {
+    width: 150px;
+    height: 150px;
+    /* overflow: hidden; */
+    margin: 0 auto;
+    
+  }
+  
+  .image img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 10px;
+  }
+
+  .info p {
+    color: white;
+  }
+
+  
+  .info {
+    margin-top: 1rem;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin: 1rem 0;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

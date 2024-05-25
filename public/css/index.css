@@ -74,9 +74,12 @@ nav ul a {
   text-transform: uppercase;
   font-size: 18px;
   display: block;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: slidein;
   /* font-family: 'Urban Graffiti PERSONAL USE ONL'; */
+  font-family: 'BR Segma', sans-serif;
+  animation-fill-mode: forwards;
+  gap: 5px;
 }
 
 nav ul a::after {
@@ -151,7 +154,7 @@ nav ul a:hover::after {
   text-align: initial;
 }
 
-@keyframes slidein {
+ @keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -159,9 +162,8 @@ nav ul a:hover::after {
 
   to {
     margin-left: 0%;
-    width: 100%;
+    width: 600px;
   }
-
 
 }
 
@@ -246,12 +248,6 @@ nav ul a:hover::after {
   display: inline-block;
 }
 
-.elenco-titulo h1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* carrosel */
 .slider{
 	position: relative;
@@ -290,6 +286,7 @@ nav ul a:hover::after {
 	transform: translate(-50%);
 	bottom: 20px;
 	cursor: pointer;
+  margin-top: 30px;
 }
 .dot{
 	display: inline-block;

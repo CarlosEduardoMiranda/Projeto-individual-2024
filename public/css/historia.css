@@ -48,7 +48,7 @@
   footer {
     /* padding: 54px 0; */
     color: rgb(0, 0, 0);
-    padding: 160px;
+    padding: 190px;
     /* animation-duration: 3s;
      animation-name: slidein; */
     font-weight: bold;
@@ -88,9 +88,10 @@
     text-transform: uppercase;
     font-size: 18px;
     display: block;
-    animation-duration: 3s;
-    animation-name: slidein;
-    font-family: "Paytone One", sans-serif;
+    animation-duration: 2s;
+    animation-name: slidedesc;
+    font-family: 'BR Segma', sans-serif;
+    text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
   }
   
   nav ul a::after {
@@ -131,6 +132,18 @@
     }
   }
   
+
+  @keyframes slidedesc {
+    from {
+        margin-top: -100%; /* Começa fora da tela acima */
+        opacity: 0; /* Invisível no início */
+    }
+
+    to {
+        margin-top: 0; /* Termina na posição normal */
+        opacity: 1; /* Totalmente visível */
+    }
+}
   .banner {
     display: flex;
     justify-content: center;
@@ -149,7 +162,9 @@
     font-weight: 700;
     margin-right: 800px;
     margin-bottom: 20px;
-    font-family: "Paytone One", sans-serif;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
+    text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
+    text-align: initial;
   }
   
   .banner .banner-text p {
@@ -157,8 +172,317 @@
     color: rgb(255, 255, 255);
     font-weight: lighter;
     margin-top: 18px 0;
-    font-weight: bold;
+    /* font-weight: bold; */
     margin-right: 800px;
-    font-family: "Archivo Black", sans-serif;
+    font-family: 'BR Segma', sans-serif;
+    text-shadow: 2px 4px 3px rgb(0, 0, 0, 2);
+    text-align: initial;
+  }
+
+  .faca-mais .container {
+    display: flex;
+    align-items: center;
   }
   
+  .faca-mais .faca-mais-text {
+    width: 50%;
+    padding: 0 40px;
+  }
+  
+  .faca-mais .faca-mais-text h3 {
+    font-size: 56px;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
+  }
+  
+  .faca-mais .faca-mais-text p {
+    margin: 30px 10px 30px 10px;
+    text-align: justify;
+    font-family: 'BR Segma', sans-serif;
+  
+  }
+  
+  .faca-mais .faca-mais-img {
+    width: 50%;
+  }
+  
+  .faca-mais .faca-mais-img img {
+    width: 100%;
+  }
+
+
+  .faca-mais-segunda-parte .container{
+    display: flex;
+    align-items: center;
+  }
+
+
+
+  .faca-mais-segunda-parte {
+    color: rgb(255, 255, 255);
+    padding: 170px;
+    background: linear-gradient(to top, rgb(0, 0, 0) 18%, rgb(255, 255, 255) 100%);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+  .faca-mais-segunda-parte .faca-mais-text {
+    width: 50%;
+    padding: 0 40px;
+  
+  }
+  
+  .faca-mais-segunda-parte .faca-mais-text h3 {
+    font-size: 56px;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
+    color: black;
+  }
+  
+  .faca-mais-segunda-parte .faca-mais-text p {
+    margin: 30px 10px 30px 10px;
+    text-align: justify;
+    font-family: 'BR Segma', sans-serif;
+    color: #ffffff;
+  
+  } 
+  
+  .faca-mais-segunda-parte .faca-mais-img {
+    width: 50%;
+    margin-top: 100px;
+  }
+  
+ .faca-mais-segunda-parte .faca-mais-img img {
+    width: 100%;
+  }
+  
+  
+
+  /* Parte preta */
+
+  .faca-mais2 .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .faca-mais2 {
+    color: rgb(255, 255, 255);
+    padding: 170px;
+    background-color: black;
+  }
+
+
+  .faca-mais2 .faca-mais-text {
+    width: 50%;
+    padding: 0 40px;
+  
+  }
+  
+  .faca-mais2 .faca-mais-text h3 {
+    font-size: 56px;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
+  }
+  
+  .faca-mais2 .faca-mais-text p {
+    margin: 30px 10px 30px 10px;
+    color: white;
+    text-align: justify;
+    word-spacing: 1px;
+    font-family: 'BR Segma', sans-serif;
+  
+  } 
+  
+  .faca-mais2 .faca-mais-img {
+    width: 50%;
+    margin-top: 100px;
+  }
+  
+  .faca-mais2 .faca-mais-img img {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .faca-mais2 .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .faca-mais2 {
+    color: rgb(255, 255, 255);
+    padding: 170px;
+    background-color: black;
+  }
+
+
+  .faca-mais2 .faca-mais-text {
+    width: 50%;
+    padding: 0 40px;
+  
+  }
+  
+  .faca-mais2 .faca-mais-text h3 {
+    font-size: 56px;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
+  }
+  
+  .faca-mais2 .faca-mais-text p {
+    margin: 30px 10px 30px 10px;
+    color: white;
+    text-align: justify;
+    word-spacing: 1px;
+    font-family: 'BR Segma', sans-serif;
+  
+  } 
+  
+  .faca-mais2 .faca-mais-img {
+    width: 50%;
+    margin-top: 100px;
+  }
+  
+  .faca-mais2 .faca-mais-img img {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+/* Fim da parte 2 */
+
+  .faca-mais3 .container3{
+    display: flex;
+    align-items: center;
+  }
+  
+  .faca-mais3 {
+    color: rgb(255, 255, 255);
+    padding: 170px;
+    background-color: black;
+  }
+
+
+  .faca-mais3 .faca-mais-text3{
+    width: 50%;
+    padding: 0 40px;
+  
+  }
+  
+  .faca-mais3 .faca-mais-text3 h3 {
+    font-size: 56px;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
+  }
+  
+  .faca-mais3 .faca-mais-text3 p {
+    margin: 30px 10px 30px 10px;
+    color: white;
+    text-align: justify;
+    word-spacing: 1px;
+    font-family: 'BR Segma', sans-serif;
+  
+  } 
+  
+  .faca-mais3 .faca-mais-img3 {
+    width: 50%;
+    margin-top: 30px;
+  }
+  
+  .faca-mais3 .faca-mais-img3 img {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .faca-mais3 .container3 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .faca-mais3 {
+    color: rgb(255, 255, 255);
+    padding: 170px;
+    background-color: black;
+  }
+
+  .final {
+    background-color: white;
+    /* margin-top: 90px; */
+  }
+  
+  .footer img {
+    width: 110px;
+    height: 140px;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    /* margin-bottom: 3.2rem; */
+  }
+  
+  .footer .col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: "Paytone One", sans-serif;
+  }
+  
+  .footer .col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: "Paytone One", sans-serif;
+  }
+  
+  .footer .col :first-child {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  
+  .footer .col a:hover {
+    opacity: 1;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .footer .col a:hover svg path {
+    stroke-opacity: 1;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .footer .col .social-media {
+    display: flex;
+    gap: 1.2rem;
+    cursor: pointer;
+  
+  }
+
+
+  /* .faca-mais3 .faca-mais-text3 {
+    width: 50%;
+    padding: 0 40px;
+  
+  }
+  
+  .faca-mais3 .faca-mais-text h3 {
+    font-size: 56px;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
+  }
+  
+  .faca-mais3 .faca-mais-text p {
+    margin: 30px 10px 30px 10px;
+    color: white;
+    text-align: justify;
+    word-spacing: 1px;
+    font-family: 'BR Segma', sans-serif;
+  
+  } 
+  
+  .faca-mais3 .faca-mais-img {
+    width: 50%;
+    margin-top: 120px;
+  }
+  
+  .faca-mais3 .faca-mais-img img {
+    width: 100%;
+    margin-top: 120px;
+  }
+  
+  
+  
+   */
