@@ -24,3 +24,9 @@ select * from usuario;
 select * from jogoDaMemoria;
 
 select * from usuario join jogoDaMemoria
+on usuario.idusuario = jogoDaMemoria.fk_usuario;
+
+
+
+
+

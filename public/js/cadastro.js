@@ -40,7 +40,73 @@ function cadastrar(){
         .catch(function (resposta) {
           console.log(`#ERRO: ${resposta}`);
         });
-       
-    
+      
     }
     }
+
+
+    function entrar() {
+      // aguardar();
+
+      var usernameVar = input_username_login.value;
+      var senhaVar = input_senha_login.value;
+
+      if (usernameVar == "" || senhaVar == "") {
+          // cardErro.style.display = "block"
+          // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+          // finalizarAguardar();
+          return false;
+      }
+      else {
+          console.log('Conseguido!')
+      }
+      console.log('cheguei até aqui')
+      console.log("FORM LOGIN: ", usernameVar);
+      console.log("FORM SENHA: ", senhaVar);
+
+      fetch("/usuarios/autenticar", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              usernameServer: usernameVar,
+              senhaServer: senhaVar
+          })
+      }).then(function (resposta) {
+          console.log("ESTOU NO THEN DO entrar()!")
+
+          if (resposta.ok) {
+              console.log(resposta);
+
+              resposta.json().then(json => {
+                  console.log(json);
+                  console.log(JSON.stringify(json));
+                  // sessionStorage.EMAIL_USUARIO = json.email;
+                  sessionStorage.USERNAME_USUARIO = json.username;
+                  sessionStorage.ID_USUARIO = json.idusuario;
+                  // sessionStorage.ID_PREFERENCIA = json.idPreferencia;
+                  // if (sessionStorage.ID_PREFERENCIA == sessionStorage.ID_USUARIO){
+
+                      setTimeout(function () {
+                          window.location = "./menu.html";
+                      }, 1000); // apenas para exibir o loading
+                
+              });
+
+          } else {
+
+              console.log("Houve um erro ao tentar realizar o login!");
+
+              resposta.text().then(texto => {
+                  console.error(texto);
+                  finalizarAguardar(texto);
+              });
+          }
+
+      }).catch(function (erro) {
+          console.log(erro);
+      })
+
+      return false;
+  }

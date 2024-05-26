@@ -1,3 +1,13 @@
+body{
+  overflow-x: hidden;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
 main {
     display: flex;
     flex-direction: column;
@@ -7,7 +17,7 @@ main {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    padding: 20px 20px 50px;
+    padding: 20px 20px 40px;
   }
   
   header {
@@ -25,16 +35,18 @@ main {
   
   .grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    /* column-gap: 10px; */
   }
   
   .card {
     aspect-ratio: 3/4;
-    width: 100%;
+    width: 50%;
     border-radius: 5px;
     position: relative;
     transition: all 400ms ease;
@@ -56,9 +68,6 @@ main {
   .front {
     transform: rotateY(180deg);
   }
-
-
-  
   .back {
     background-image: url('../assets/imgs/corinthians\ Simbolo\ colorido.jpg');
     backface-visibility: hidden;

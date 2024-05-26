@@ -2,39 +2,38 @@ var usuarioModel = require("../models/usuarioModel");
 var aquarioModel = require("../models/aquarioModel");
 
 function autenticar(req, res) {
-    var email = req.body.emailServer;
+    var username = req.body.usernameServer;
     var senha = req.body.senhaServer;
 
-    if (email == undefined) {
+    if (username == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
 
-        usuarioModel.autenticar(email, senha)
+        usuarioModel.autenticar(username, senha)
             .then(
-                function (resultadoAutenticar) {
-                    console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
-                    console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+                function (resultado) {
+                    console.log(`\nResultados encontrados: ${resultado.length}`);
+                    console.log(`Resultados: ${JSON.stringify(resultado)}`);
+                    // transforma JSON em String
 
-                    if (resultadoAutenticar.length == 1) {
-                        console.log(resultadoAutenticar);
 
-                        aquarioModel.buscarAquariosPorEmpresa(resultadoAutenticar[0].empresaId)
-                            .then((resultadoAquarios) => {
-                                if (resultadoAquarios.length > 0) {
-                                    res.json({
-                                        id: resultadoAutenticar[0].id,
-                                        email: resultadoAutenticar[0].email,
-                                        nome: resultadoAutenticar[0].nome,
-                                        senha: resultadoAutenticar[0].senha,
-                                        aquarios: resultadoAquarios
-                                    });
-                                } else {
-                                    res.status(204).json({ aquarios: [] });
-                                }
-                            })
-                    } else if (resultadoAutenticar.length == 0) {
+                    if (resultado.length == 1) {
+                        console.log(resultado);
+                        res.json({
+                            id: resultado[0].idusuario,
+                            // email: resultado[0].email,
+                            username: resultado[0].username,
+                            senha: resultado[0].senha,
+                            
+                        });
+
+                        if (resultado.length > 0) {
+                          
+                        }
+
+                    } else if (resultado.length == 0) {
                         res.status(403).send("Email e/ou senha inválido(s)");
                     } else {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
@@ -50,7 +49,6 @@ function autenticar(req, res) {
     }
 
 }
-
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var username = req.body.usernameServer;
