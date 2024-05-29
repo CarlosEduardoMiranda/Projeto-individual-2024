@@ -437,7 +437,7 @@
   .faca-mais-ultimo {
     color: rgb(255, 255, 255);
     padding: 170px;
-    background: linear-gradient(to bottom, rgb(0, 0, 0) 18%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 5%, rgb(255, 255, 255) 100%);
     color: rgb(0, 0, 0);
     font-weight: bold;
   }
@@ -452,13 +452,16 @@
     font-size: 56px;
     font-family: 'Urban Graffiti PERSONAL USE ONL';
     color: black;
+    margin-top: 80px;
   }
   
   .faca-mais-ultimo .faca-mais-text p {
-    margin: 30px 10px 30px 10px;
-    text-align: justify;
+    /* margin: 30px 10px 30px 10px; */
     font-family: 'BR Segma', sans-serif;
     color: #ffffff;
+    margin: 10px 0; /* Define margens superior e inferior de 10px e remove margens laterais */
+    padding: 0; /* Remove qualquer preenchimento */
+    line-height: 1.5; /* Ajusta a altura da linha */
   
   } 
   
@@ -477,11 +480,45 @@
  .faca-mais-ultimo .faca-mais-img img {
     width: 100%;
   }
+
+  .faca-mais-antes-footer .container {
+    display: flex;
+    align-items: center;
+  }
   
+  .faca-mais-antes-footer .faca-mais-text {
+    width: 50%;
+    padding: 0 40px;
+  }
   
+  .faca-mais-antes-footer .faca-mais-text h3 {
+    font-size: 56px;
+    font-family: 'Urban Graffiti PERSONAL USE ONL';
+  }
+  
+  .faca-mais-antes-footer .faca-mais-text p {
+    margin: 30px 10px 30px 10px;
+    text-align: justify;
+    font-family: 'BR Segma', sans-serif;
+  
+  }
+  
+  .faca-mais-antes-footer .faca-mais-img {
+    width: 50%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+   transform: rotateY(15deg) rotateX(10deg);
+    transition: transform 0.3s;
+  }
+
+  .faca-mais-antes-footer .faca-mais-img:hover{
+    transform: rotateY(0deg) rotateX(0deg);
+  } 
+  
+  .faca-mais-antes-footer .faca-mais-img img {
+    width: 100%;
+  }
 
   
-
 
   .final {
     background-color: white;

@@ -98,10 +98,6 @@ function cadastrar(){
 
               console.log("Houve um erro ao tentar realizar o login!");
 
-              resposta.text().then(texto => {
-                  console.error(texto);
-                  finalizarAguardar(texto);
-              });
           }
 
       }).catch(function (erro) {

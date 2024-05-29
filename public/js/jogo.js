@@ -79,7 +79,7 @@ const createCard = (character) => { // Função para criar uma carta
   const front = createElement('div', 'face front'); // Cria um elemento div com a classe 'face front' (parte da frente da carta)
   const back = createElement('div', 'face back'); // Cria um elemento div com a classe 'face back' (parte de trás da carta)
 
-  front.style.backgroundImage = `url('../public/assets/Jogadores/${character}.png')`; // Define a imagem de fundo da parte da frente da carta
+  front.style.backgroundImage = `url('./assets/Jogadores/${character}.png')`; // Define a imagem de fundo da parte da frente da carta
 
   card.appendChild(front); // Adiciona a parte da frente da carta ao elemento da carta
   card.appendChild(back); // Adiciona a parte de trás da carta ao elemento da carta
