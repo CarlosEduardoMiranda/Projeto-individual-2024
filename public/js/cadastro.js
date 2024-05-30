@@ -1,21 +1,23 @@
 
 function cadastrar(){
     var usernameVar = input_username_cadastro.value;
-    // var sobrenomeVar = input_sobrenome.value;
     var emailVar = input_email_cadastro.value;
-    // var celularVar = input_celular.value;
     var senhaVar = input_senha_cadastro.value;
-    // var confirmarsenhaVar = input_confirmarsenha.value;
     console.log('Chegou ate aqui')
     
     if (
       usernameVar == "" ||
-    //   sobrenomeVar == "" ||
       emailVar == "" ||
-    //   celularVar == "" ||
       senhaVar == ""
     ) { 
-        alert ("Mensagem de erro para todos os campos em branco");
+      alert ("Por favor, insira seus dados.");
+      return;
+    } else if (!validateEmail(emailVar)) {
+      alert("Por favor, insira um endereço de email válido.");
+      return;
+    } else if (senhaVar.length < 6) {
+    alert("A senha deve ter no mínimo 6 caracteres.");
+    return;
     } else {
       console.log('Chegou ate aqui')
       fetch("/usuarios/cadastrar", {
@@ -44,17 +46,17 @@ function cadastrar(){
     }
     }
 
+    function validateEmail(email) {
+      var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+  }
 
     function entrar() {
-      // aguardar();
 
       var usernameVar = input_username_login.value;
       var senhaVar = input_senha_login.value;
 
       if (usernameVar == "" || senhaVar == "") {
-          // cardErro.style.display = "block"
-          // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-          // finalizarAguardar();
           return false;
       }
       else {

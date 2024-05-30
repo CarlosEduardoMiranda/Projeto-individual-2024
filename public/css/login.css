@@ -10,7 +10,33 @@ body {
     justify-content: center;
     min-height: 100vh;
     background: #444;
+    position: relative; /* Added to contain the pseudo-element */
 }
+
+body::before{
+    content: "";
+    position: absolute;
+    margin-top: 400px;
+    width: 20%;
+    height: 50%;
+    margin-right: 1255px;
+    background: url(../assets/Jogadores/Yuri\ Alberto.png) no-repeat center center/cover;
+    z-index: 1000; /* Ensure this is above the container */
+    background-position-y: -30px;
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    margin-top: 400px;
+    width: 20%;
+    height: 50%;
+    margin-left: 1200px;
+    background: url(../assets/Jogadores/Wesley.png) no-repeat center center/cover;
+    z-index: 1000; /* Ensure this is above the container */
+    background-position-y: -30px;
+}
+
 .container {
     position: relative;
     width: 70vw;

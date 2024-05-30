@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link REL="SHORTCUT ICON" HREF="./assets/imgs/Corinthians.webp">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
 
@@ -20,7 +22,7 @@
 
     <nav class="menu-lateral">
         <div class="btn-expandir">
-           <!-- <i class="bi bi-list" id="btn-exp"></i> -->
+            <!-- <i class="bi bi-list" id="btn-exp"></i> -->
         </div>
 
         <ul>
@@ -52,28 +54,47 @@
 
     </nav>
 
-    <div class="Dashboard">
-    <div class="container">
-        <div class="card">
-            <canvas id="myChart" width="400" height="200"></canvas>
+    <!-- Faça o card aqui -->
+    <!-- <div class="container-estatística">
+        <div class="card-estatística">
+            <h3>Posição no Ranking Atual</h3>
+            <p>Você está atualmente na posição: <strong>5</strong></p>
         </div>
-        <div class="card">
-            <canvas id="myChart2" width="400" height="200"></canvas>
+        <div class="card-estatística">
+            <h3>Média de Tempo</h3>
+            <p>Sua média de tempo é: <strong>2m 30s</strong></p>
+        </div>
+    </div> -->
+
+
+    <div class="Dashboard">
+        <div class="container">
+            <div class="dash-cima">
+                <div class="card">
+                    <canvas id="myChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+            <div class="dash-baixo">
+                <div class="card">
+                    <canvas id="myChart2" width="400" height="200"></canvas>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-    
-    
+
+   
+
     <script src="./js/menu.js"></script>
 </body>
+
 </html>
 <script>
     var contClick = 0;
 
-const ctx = document.getElementById('myChart2');
-const ctz = document.getElementById('myChart');
+    const ctx = document.getElementById('myChart2');
+    const ctz = document.getElementById('myChart');
 
-var ctx1 = document.getElementById('myChart').getContext('2d');
+    var ctx1 = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx1, {
         type: 'bar',
         data: {
@@ -126,67 +147,67 @@ var ctx1 = document.getElementById('myChart').getContext('2d');
         }
     });
 
-const myChart3 = new Chart(cty, {
-  type: 'line',
-  data: {
-    labels: ['segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado', 'domingo'],
-    datasets: [{
-      label: 'Temperatura Média',
-      data: [],
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      borderWidth: 1
-    }]
-  },
-  options: {
-    // responsive: true,
-    // maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true,
-        // grid: {
-        // 	color: '#000',
-        // 	drawBorder: false 
-        // }
-      },
-      x: {
-        // grid: {
-        // 	display: false,
-        // }
-      }
-    }
-  }
-});
+    const myChart3 = new Chart(cty, {
+        type: 'line',
+        data: {
+            labels: ['segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado', 'domingo'],
+            datasets: [{
+                label: 'Temperatura Média',
+                data: [],
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            // responsive: true,
+            // maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    // grid: {
+                    // 	color: '#000',
+                    // 	drawBorder: false 
+                    // }
+                },
+                x: {
+                    // grid: {
+                    // 	display: false,
+                    // }
+                }
+            }
+        }
+    });
 
-const myChart4 = new Chart(ctw, {
-  type: 'line',
-  data: {
-    labels: ['segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado', 'domingo'],
-    datasets: [{
-      label: 'Umidade Média',
-      data: [],
-      backgroundColor: 'rgb(40, 140, 255)',
-      borderColor: 'rgb(40, 140, 255)',
-      borderWidth: 1
-    }]
-  },
-  options: {
-    // responsive: true,
-    // maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true,
-        // grid: {
-        // 	color: '#000',
-        // 	drawBorder: false 
-        // }
-      },
-      x: {
-        // grid: {
-        // 	display: false,
-        // }
-      }
-    }
-  }
-});
+    const myChart4 = new Chart(ctw, {
+        type: 'line',
+        data: {
+            labels: ['segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado', 'domingo'],
+            datasets: [{
+                label: 'Umidade Média',
+                data: [],
+                backgroundColor: 'rgb(40, 140, 255)',
+                borderColor: 'rgb(40, 140, 255)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            // responsive: true,
+            // maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    // grid: {
+                    // 	color: '#000',
+                    // 	drawBorder: false 
+                    // }
+                },
+                x: {
+                    // grid: {
+                    // 	display: false,
+                    // }
+                }
+            }
+        }
+    });
 </script>
