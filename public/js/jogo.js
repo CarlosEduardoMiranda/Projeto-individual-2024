@@ -16,6 +16,30 @@ const characters = [
 ];
 
 
+function cadastrarTempo() {
+  var tempo = Number(currentTime)
+  fetch("/medida/cadastrarTempo", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+          tempoServer: tempo,
+          idUsuarioServer: Number(sessionStorage.ID_USUARIO),
+      })
+  })
+      .then(function (resposta) {
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+              setTimeout(() => {
+                  window.location = "./menu.html";
+              }, "2000");
+          } else {
+              alert('Erro');
+          }
+      })
+}
 
 const createElement = (tag, className) => { 
   const element = document.createElement(tag); // Cria um novo elemento HTML com a tag fornecida
@@ -32,6 +56,7 @@ const checkEndGame = () => { // Função para verificar se o jogo acabou
   if (disabledCards.length === 20) { // Se todas as cartas estiverem desativadas (total de 20)
     clearInterval(this.loop); // Para o contador de tempo
     alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`); 
+    cadastrarTempo();
   }
 }
 
@@ -103,10 +128,11 @@ const loadGame = () => { // Função para carregar o jogo
 
 const startTimer = () => { 
   this.loop = setInterval(() => { 
-    const currentTime = +timer.innerHTML; 
+     currentTime = +timer.innerHTML; 
     timer.innerHTML = currentTime + 1; 
   }, 1000); 
 }
+    let currentTime = 0
 
 window.onload = () => { 
   spanPlayer.innerHTML = localStorage.getItem('player'); // Define o nome do jogador com base no valor armazenado no localStorage

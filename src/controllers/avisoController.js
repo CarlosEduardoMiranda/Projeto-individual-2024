@@ -1,5 +1,6 @@
 var avisoModel = require("../models/avisoModel");
 
+
 function listar(req, res) {
     avisoModel.listar().then(function (resultado) {
         if (resultado.length > 0) {
@@ -132,5 +133,6 @@ module.exports = {
     pesquisarDescricao,
     publicar,
     editar,
-    deletar
+    deletar,
+    // cadastrarTempo
 }

@@ -1,3 +1,4 @@
+// const TempoJogadasModel = require("../../src/models/tempoJogadasModel");
 
 function cadastrar(){
     var usernameVar = input_username_cadastro.value;
@@ -87,6 +88,8 @@ function cadastrar(){
                   // sessionStorage.EMAIL_USUARIO = json.email;
                   sessionStorage.USERNAME_USUARIO = json.username;
                   sessionStorage.ID_USUARIO = json.idusuario;
+                  sessionStorage.TEMPO_USUARIO = json.tempo;
+                  sessionStorage.TEMPO_JOGADAS = JSON.stringify(json.tempoJogadas);
                   // sessionStorage.ID_PREFERENCIA = json.idPreferencia;
                   // if (sessionStorage.ID_PREFERENCIA == sessionStorage.ID_USUARIO){
 

@@ -1,5 +1,6 @@
+
 var usuarioModel = require("../models/usuarioModel");
-var aquarioModel = require("../models/aquarioModel");
+var TempoJogadasModel = require("../models/tempoJogadasModel");
 
 function autenticar(req, res) {
     var username = req.body.usernameServer;
@@ -21,17 +22,18 @@ function autenticar(req, res) {
 
                     if (resultado.length == 1) {
                         console.log(resultado);
-                        res.json({
-                            id: resultado[0].idusuario,
-                            // email: resultado[0].email,
-                            username: resultado[0].username,
-                            senha: resultado[0].senha,
-                            
-                        });
-
-                        if (resultado.length > 0) {
-                          
-                        }
+                        TempoJogadasModel.TempoJogadas(resultado[0].idusuario)
+                            .then((resultadoTempo) => {
+                                res.json({
+                                    idusuario: resultado[0].idusuario,
+                                    // email: resultado[0].email,
+                                    username: resultado[0].username,
+                                    senha: resultado[0].senha,
+                                    tempo: resultado[0].MenorTempo,
+                                    tempoJogadas: resultadoTempo
+                                });
+                            })
+                    
 
                     } else if (resultado.length == 0) {
                         res.status(403).send("Email e/ou senha inválido(s)");

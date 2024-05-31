@@ -1,5 +1,21 @@
 var medidaModel = require("../models/medidaModel");
 
+
+function cadastrarTempo(req, res) {
+    tempo = req.body.tempoServer;
+    idusuario = req.body.idUsuarioServer;
+    avisoModel.cadastrarTempo(tempo, idusuario)
+    .then(
+        function (resultado) {
+        res.json(resultado)
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os avisos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
 function buscarUltimasMedidas(req, res) {
 
     const limite_linhas = 7;
@@ -43,6 +59,7 @@ function buscarMedidasEmTempoReal(req, res) {
 
 module.exports = {
     buscarUltimasMedidas,
-    buscarMedidasEmTempoReal
+    buscarMedidasEmTempoReal,
+    cadastrarTempo
 
 }
