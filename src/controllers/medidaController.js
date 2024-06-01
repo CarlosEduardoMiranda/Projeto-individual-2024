@@ -4,7 +4,8 @@ var medidaModel = require("../models/medidaModel");
 function cadastrarTempo(req, res) {
     tempo = req.body.tempoServer;
     idusuario = req.body.idUsuarioServer;
-    avisoModel.cadastrarTempo(tempo, idusuario)
+    console.log('estou no controller', tempo, idusuario)
+    medidaModel.cadastrarTempo(tempo, idusuario)
     .then(
         function (resultado) {
         res.json(resultado)

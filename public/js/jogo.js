@@ -18,7 +18,7 @@ const characters = [
 
 function cadastrarTempo() {
   var tempo = Number(currentTime)
-  fetch("/medida/cadastrarTempo", {
+  fetch("/medidas/cadastrarTempo", {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
@@ -40,6 +40,7 @@ function cadastrarTempo() {
           }
       })
 }
+
 
 const createElement = (tag, className) => { 
   const element = document.createElement(tag); // Cria um novo elemento HTML com a tag fornecida

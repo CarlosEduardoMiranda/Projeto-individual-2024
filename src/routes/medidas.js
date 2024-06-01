@@ -12,7 +12,7 @@ router.get("/tempo-real/:idAquario", function (req, res) {
 })
 
 router.post("/cadastrarTempo", function (req, res) {
-    avisoController.cadastrarTempo(req, res);
+    medidaController.cadastrarTempo(req, res);
 });
 
 

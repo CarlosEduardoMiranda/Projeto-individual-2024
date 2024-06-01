@@ -26,6 +26,23 @@ select * from jogoDaMemoria;
 select * from usuario join jogoDaMemoria
 on usuario.idusuario = jogoDaMemoria.fk_usuario;
 
+  Select idusuario, username, email, senha, min(tempo) FROM usuario
+  join jogoDaMemoria on usuario.idusuario = jogoDaMemoria.fk_usuario
+	WHERE username = 'Romerinho cheira gol' AND senha = 'romero1234'
+    group by idusuario;
+    
+    select tempo from jogoDaMemoria join usuario
+		on usuario.idusuario = jogoDaMemoria.fk_usuario where idusuario = 1
+        limit 5;
+        
+        
+    
+    
+    
+    
+    
+
+
 
 
 
