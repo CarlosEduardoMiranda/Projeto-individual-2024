@@ -1,3 +1,4 @@
+// const {listarTentativa}  = require("../controllers/medidaController");
 var database = require("../database/config");
 
 function cadastrarTempo(tempo, idusuario) {
@@ -6,6 +7,16 @@ function cadastrarTempo(tempo, idusuario) {
     insert into jogoDaMemoria values
     (default, '${tempo}', ${idusuario});
     `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function listarTentativa(idusuario){
+    var instrucaoSql = `select tempo from jogoDaMemoria join usuario
+    on usuario.idusuario = jogoDaMemoria.fk_usuario where idusuario = ${idusuario}
+    order by idjogo desc limit 5;`;
+
+    
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
@@ -43,5 +54,6 @@ function buscarMedidasEmTempoReal(idAquario) {
 module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
-    cadastrarTempo
+    cadastrarTempo,
+    listarTentativa
 }

@@ -15,5 +15,9 @@ router.post("/cadastrarTempo", function (req, res) {
     medidaController.cadastrarTempo(req, res);
 });
 
+router.post(`/listarTentativa`, function(req, res){
+    medidaController.listarTentativa(req, res);
+});  
+
 
 module.exports = router;

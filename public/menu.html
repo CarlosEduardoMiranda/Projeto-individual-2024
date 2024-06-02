@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body onload="listarTentativa(sessionStorage.ID_USUARIO)">
 
 
     <header>
@@ -73,7 +73,7 @@
                         <li><span class="rank-position">10.</span> Bruno - <span class="rank-time">3m 10s</span></li>
                     </ol>
                 </div>
-    
+
                 <div class="container-pai">
                     <!-- Card para a Posição no Ranking Atual -->
                     <div class="container-estatística">
@@ -82,7 +82,7 @@
                             <p>Você está atualmente na posição: <strong>5</strong></p>
                         </div>
                     </div>
-            
+
                     <!-- Card para a Média de Tempo -->
                     <div class="container-estatística">
                         <div class="card-estatística">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="charts">
                     <div class="dash-cima">
                         <div class="card">
@@ -107,7 +107,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <script src="./js/menu.js"></script>
 </body>
@@ -133,11 +133,11 @@
 
     var ctx1 = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx1, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: [], // Labels vazias
             datasets: [{
-                label: 'Tempo por tentativa',
+                label: 'Tempo em segundos',
                 data: [], // Dados vazios
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -164,102 +164,66 @@
         }
     });
 
-    // Recupera os dados do sessionStorage
-    var capturaTempoJogadas = sessionStorage.getItem('TEMPO_JOGADAS');
-    if (capturaTempoJogadas) {
-        capturaTempoJogadas = JSON.parse(capturaTempoJogadas);
-        // Adiciona os dados e as labels ao gráfico 
-        for (var posicao = 0; posicao < capturaTempoJogadas.length; posicao++) {
-            let UltimoDado = capturaTempoJogadas[posicao];
-            myChart.data.datasets[0].data.push(UltimoDado.tempo);
-            myChart.data.labels.push(`Tentativa ${posicao + 1}`);
+    let idUsuario =  sessionStorage.ID_USUARIO 
+
+    function listarTentativa(idUsuario) {
+        let novosDados;
+
+        fetch(`/medidas/listarTentativa`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                idusuarioServer: idUsuario
+            }),
+        })
+            .then(function (resultado) {
+               if (resultado.ok) {
+                resultado.json().then(function (resultado) {
+                    resultado.reverse();
+                    atualizarGrafico(resultado); 
+            });
         }
-        // Atualiza o gráfico
-        myChart.update();
-    } else {
-        console.error('Nenhum dado encontrado no sessionStorage.');
+            })
+            .catch(function (resultado){
+                console.log(`#ERRO: ${resultado}`)
+            });
     }
 
-    var ctx2 = document.getElementById('myChart2').getContext('2d');
-    var myChart2 = new Chart(ctx2, {
-        type: 'line',
-        data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [{
-                label: 'My First dataset',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
-                data: [0, 10, 5, 2, 20, 30, 45]
-            }]
-        },
-        options: {
-            maintainAspectRatio: false, // permite alterar a proporção do gráfico
-            responsive: true,
-            // outras opções de configuração
-        }
-    });
 
-    // const myChart3 = new Chart(cty, {
+    function atualizarGrafico(resultado){
+        myChart.data.datasets[0].data = []
+        myChart.data.labels = []
+        for (var posicao = 0; posicao < resultado.length; posicao++) {
+        let UltimoDado = resultado[posicao];
+        console.log(UltimoDado.tempo)
+        myChart.data.datasets[0].data.push(UltimoDado.tempo);
+        myChart.data.labels.push(`Tentativa  ${posicao + 1}`);
+        myChart.update();
+    }
+    }
+
+    setInterval(listarTentativa(), 3000);
+
+    // var ctx2 = document.getElementById('myChart2').getContext('2d');
+    // var myChart2 = new Chart(ctx2, {
     //     type: 'line',
     //     data: {
-    //         labels: ['segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado', 'domingo'],
+    //         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     //         datasets: [{
-    //             label: 'Temperatura Média',
-    //             data: [],
+    //             label: 'My First dataset',
     //             backgroundColor: 'rgb(255, 99, 132)',
     //             borderColor: 'rgb(255, 99, 132)',
-    //             borderWidth: 1
+    //             data: [0, 10, 5, 2, 20, 30, 45]
     //         }]
     //     },
     //     options: {
-    //         // responsive: true,
-    //         // maintainAspectRatio: false,
-    //         scales: {
-    //             y: {
-    //                 beginAtZero: true,
-    //                 // grid: {
-    //                 // 	color: '#000',
-    //                 // 	drawBorder: false
-    //                 // }
-    //             },
-    //             x: {
-    //                 // grid: {
-    //                 // 	display: false,
-    //                 // }
-    //             }
-    //         }
+    //         maintainAspectRatio: false, // permite alterar a proporção do gráfico
+    //         responsive: true,
+    //         // outras opções de configuração
     //     }
     // });
 
-    // const myChart4 = new Chart(ctw, {
-    //     type: 'line',
-    //     data: {
-    //         labels: ['segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado', 'domingo'],
-    //         datasets: [{
-    //             label: 'Umidade Média',
-    //             data: [],
-    //             backgroundColor: 'rgb(40, 140, 255)',
-    //             borderColor: 'rgb(40, 140, 255)',
-    //             borderWidth: 1
-    //         }]
-    //     },
-    //     options: {
-    //         // responsive: true,
-    //         // maintainAspectRatio: false,
-    //         scales: {
-    //             y: {
-    //                 beginAtZero: true,
-    //                 // grid: {
-    //                 // 	color: '#000',
-    //                 // 	drawBorder: false
-    //                 // }
-    //             },
-    //             x: {
-    //                 // grid: {
-    //                 // 	display: false,
-    //                 // }
-    //             }
-    //         }
-    //     }
-    // });
+
 </script>
