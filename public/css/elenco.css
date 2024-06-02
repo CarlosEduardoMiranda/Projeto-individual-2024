@@ -166,77 +166,71 @@
     }
 }
 
- .slide-card {
-    background-color: #000;
-    color: #fff;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  .container-jogadores {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .player-cards {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .card {
-    background-color: #111;
-    padding: 2rem;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-  } */
-  
-  .image {
-    width: 150px;
-    height: 150px;
-    /* overflow: hidden; */
-    margin: 0 auto;
-    
-  }
-  
-  .image img {
-    width: 80%;
-    height: 100%;
-    object-fit: cover;
-    margin-top: 10px;
-  }
+.slider-jogadores {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
 
-  .info p {
-    color: white;
-  }
+.slider-container {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
 
-  
-  .info {
-    margin-top: 1rem;
-  }
-  
-  .details {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    margin: 1rem 0;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 33.33%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.slide:last-child {
+  border-right: none;
+}
+
+.player-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.player-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}

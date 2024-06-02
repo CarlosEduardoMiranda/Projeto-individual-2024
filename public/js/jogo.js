@@ -56,7 +56,7 @@ const checkEndGame = () => { // Função para verificar se o jogo acabou
 
   if (disabledCards.length === 20) { // Se todas as cartas estiverem desativadas (total de 20)
     clearInterval(this.loop); // Para o contador de tempo
-    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`); 
+    alert(`Parabéns,! Seu tempo foi de: ${timer.innerHTML} segundos.`); 
     cadastrarTempo();
   }
 }

@@ -5,11 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
-    background-color: #000;
 }
 
 body{
     height: 100vh;
+    color: white;
 }
 
 header {
@@ -136,27 +136,145 @@ ul li.item-menu a .icon > i{
     align-items: center;
     gap: 10px; /* Adiciona um gap de 10px entre os elementos filhos */
 }
-/* 
-.container-estatistica .card {
-    background-color: #f8f9fa;
-    border: 1px solid #ccc;
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Estilos para o ranking */
+.ranking {
+    background-color: #000000; /* Preto */
     border-radius: 10px;
     padding: 20px;
-    margin: 10px;
-    box-shadow: 0 2px 4px rgb(255, 0, 0);
-    flex: 1;
-    max-width: 400px;
-    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    color: #FFFFFF; /* Branco */
+    text-align: center;
+}
+
+.ranking h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #FFD700; /* Dourado */
+}
+
+.ranking ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.ranking li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    padding: 10px;
+    border-bottom: 1px solid #FFD700; /* Dourado */
+}
+
+.ranking li:last-child {
+    border-bottom: none;
+}
+
+.rank-position {
+    font-weight: bold;
+    color: #FFD700; /* Dourado */
+}
+
+.rank-time {
+    float: right;
+}
+
+/* Estilos para o container-pai e seus elementos */
+.container-pai {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 80px;
+}
+
+.container-estatística {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-estatística {
+    background-color: #000000; /* Preto */
+    color: #FFFFFF; /* Branco */
+    border: 2px solid #FFD700; /* Dourado */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-estatística:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .card-estatística h3 {
-    margin-bottom: 15px;
+    margin-top: 0;
+    color: #FFD700; /* Dourado */
     font-size: 1.5em;
-    color: #ffffff;
 }
 
 .card-estatística p {
+    margin: 10px 0;
     font-size: 1.2em;
-    color: #ffffff;
 }
- */
+
+.card-estatística strong {
+    color: #FFD700; /* Dourado */
+}
+
+/* Estilos para os gráficos */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dash-cima, .dash-baixo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para alinhar as estatísticas à altura dos gráficos */
+.stats-and-charts {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-left: 300px;
+}
+
+.container-pai, .container {
+    height: auto;
+}
+
+.container-pai {
+    justify-content: center;
+}
+
+.charts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

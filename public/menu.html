@@ -54,35 +54,60 @@
 
     </nav>
 
-    <!-- Faça o card aqui -->
-    <!-- <div class="container-estatística">
-        <div class="card-estatística">
-            <h3>Posição no Ranking Atual</h3>
-            <p>Você está atualmente na posição: <strong>5</strong></p>
-        </div>
-        <div class="card-estatística">
-            <h3>Média de Tempo</h3>
-            <p>Sua média de tempo é: <strong>2m 30s</strong></p>
-        </div>
-    </div> -->
-
-
-    <div class="Dashboard">
+    <div class="dashboard">
         <div class="container">
-            <div class="dash-cima">
-                <div class="card">
-                    <canvas id="myChart" width="400" height="200"></canvas>
+            <div class="stats-and-charts">
+                <!-- Ranking com 10 pessoas -->
+                <div class="ranking">
+                    <h3>Ranking</h3>
+                    <ol>
+                        <li><span class="rank-position">1.</span> João - <span class="rank-time">1m 45s</span></li>
+                        <li><span class="rank-position">2.</span> Maria - <span class="rank-time">1m 50s</span></li>
+                        <li><span class="rank-position">3.</span> Pedro - <span class="rank-time">2m 00s</span></li>
+                        <li><span class="rank-position">4.</span> Ana - <span class="rank-time">2m 10s</span></li>
+                        <li><span class="rank-position">5.</span> Carlos - <span class="rank-time">2m 30s</span></li>
+                        <li><span class="rank-position">6.</span> Lucas - <span class="rank-time">2m 35s</span></li>
+                        <li><span class="rank-position">7.</span> Julia - <span class="rank-time">2m 40s</span></li>
+                        <li><span class="rank-position">8.</span> Rafael - <span class="rank-time">2m 50s</span></li>
+                        <li><span class="rank-position">9.</span> Fernanda - <span class="rank-time">3m 00s</span></li>
+                        <li><span class="rank-position">10.</span> Bruno - <span class="rank-time">3m 10s</span></li>
+                    </ol>
                 </div>
-            </div>
-            <div class="dash-baixo">
-                <div class="card">
-                    <canvas id="myChart2" width="400" height="200"></canvas>
+    
+                <div class="container-pai">
+                    <!-- Card para a Posição no Ranking Atual -->
+                    <div class="container-estatística">
+                        <div class="card-estatística">
+                            <h3>Posição no Ranking Atual</h3>
+                            <p>Você está atualmente na posição: <strong>5</strong></p>
+                        </div>
+                    </div>
+            
+                    <!-- Card para a Média de Tempo -->
+                    <div class="container-estatística">
+                        <div class="card-estatística">
+                            <h3>Média de Tempo</h3>
+                            <p>Sua média de tempo é: <strong>2m 30s</strong></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="charts">
+                    <div class="dash-cima">
+                        <div class="card">
+                            <canvas id="myChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                    <div class="dash-baixo">
+                        <div class="card">
+                            <canvas id="myChart2" width="400" height="200"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
+    
 
     <script src="./js/menu.js"></script>
 </body>

@@ -1,130 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elenco</title>
-    <link rel="stylesheet" href="./css/elenco.css">
-    <link REL="SHORTCUT ICON" HREF="./assets/imgs/Corinthians.webp">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elenco</title>
+  <link rel="stylesheet" href="./css/elenco.css">
+  <link REL="SHORTCUT ICON" HREF="./assets/imgs/Corinthians.webp">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-          <nav>
-            <a href="index.html">
-              <img src="./assets/imgs/Logo corinthians  preto e branco.png" alt="logo">
-            </a>
-            <ul class="ul">
-              <a href="index.html">Home</a>
-              <a href="./historia.html">História</a>
-              <a href="./titulos.html">Títulos</a>
-              <!-- <a href="">Elenco</a> -->
-              <!-- <a href="">Jogos</a> -->
-              <a href="./login.html">Entrar</a>
-            </ul>
-          </nav>
-          <section class="banner">
-            <div class="banner-text">
-              <h1>Elenco</h1>
-              <p>Eu sou maloqueiro,corinthiano e sofredor!</p>
-              <!-- <p>É o coringão!</p> -->
-              <!-- <a href="cadastro.html" class="btn">Entrar Contato</a> -->
-            </div>
-          </section>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html">
+          <img src="./assets/imgs/Logo corinthians  preto e branco.png" alt="logo">
+        </a>
+        <ul class="ul">
+          <a href="index.html">Home</a>
+          <a href="./historia.html">História</a>
+          <a href="./titulos.html">Títulos</a>
+          <!-- <a href="">Elenco</a> -->
+          <!-- <a href="">Jogos</a> -->
+          <a href="./login.html">Entrar</a>
+        </ul>
+      </nav>
+      <section class="banner">
+        <div class="banner-text">
+          <h1>Elenco</h1>
+          <p>Eu sou maloqueiro,corinthiano e sofredor!</p>
+          <!-- <p>É o coringão!</p> -->
+          <!-- <a href="cadastro.html" class="btn">Entrar Contato</a> -->
         </div>
-        <!-- end container -->
-      </header>
-      
-      <div class="slide-card">
-      <div class="container-jogadores">
-        <h1>+ ELENCO <i class="fa fa-angle-left"></i> <i class="fa fa-angle-right"></i></h1>
-        <div class="player-cards">
-          <div class="card">
-            <div class="image">
-              <img src="./assets/Jogadores/cassio.png" alt="Jogador 1">
-            </div>
-            <div class="info">
-              <h2>Cassio</h2>
-              <p>Goleiro</p>
-              <div class="details">
-                <span>ALTURA</span>
-                <span>1,94</span>
-              </div>
-              <div class="details">
-                <span>IDADE</span>
-                <span>27</span>
-              </div>
-              <p>CIDADE NATAL</p>
-              <p>SAN LORENZO - EQUADOR</p>
-              <!-- <button>COMPRAR > </button> -->
-            </div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <img src="./assets/Jogadores/Carlos Miguel.png" alt="Jogador 2">
-            </div>
-
-            <div class="info">
-              <h2>Gustavo Henrique</h2>
-              <p>ZAGUEIRO</p>
-              <div class="details">
-                <span>ALTURA</span>
-                <span>1,96</span>
-              </div>
-              <div class="details">
-                <span>IDADE</span>
-                <span>31</span>
-              </div>
-              <p>CIDADE NATAL</p>
-              <p>SÃO PAULO, SP - BRASIL</p>
-              <button>COMPRAR > </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img src="./assets/Jogadores/Donelli.png" alt="Jogador 3">
-            </div>
-            <div class="info">
-              <h2>João Pedro</h2>
-              <p>ZAGUEIRO</p>
-              <div class="details">
-                <span>ALTURA</span>
-                <span>1,92</span>
-              </div>
-              <div class="details">
-                <span>IDADE</span>
-                <span>20</span>
-              </div>
-              <p>CIDADE NATAL</p>
-              <p>SETE LAGOAS, MG - BRASIL</p>
-              <button>COMPRAR > </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img src="./assets/Jogadores/Gustavo Henrique.png" alt="Jogador 2">
-            </div>
-            <div class="info">
-              <h2>Gustavo Henrique</h2>
-              <p>ZAGUEIRO</p>
-              <div class="details">
-                <span>ALTURA</span>
-                <span>1,96</span>
-              </div>
-              <div class="details">
-                <span>IDADE</span>
-                <span>31</span>
-              </div>
-              <p>CIDADE NATAL</p>
-              <p>SÃO PAULO, SP - BRASIL</p>
-              <button>COMPRAR > </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
+    <!-- end container -->
+  </header>
+
+  <div class="slider-jogadores">
+  <div class="slider-container">
+    <div class="slider" id="slider">
+        <!-- Cartões dos jogadores -->
+        <div class="slide">
+            <img src="./assets/Jogadores/Carlos Miguel.png" alt="Jogador 1" class="player-image">
+            <div class="player-name">Jogador 1</div>
+        </div>
+        <div class="slide">
+            <img src="./assets/Jogadores/Donelli.png" alt="Jogador 2" class="player-image">
+            <div class="player-name">Jogador 2</div>
+        </div>
+        <div class="slide">
+          <img src="./assets/Jogadores/Donelli.png" alt="Jogador 2" class="player-image">
+          <div class="player-name">Jogador 2</div>
+      </div>
+      <div class="slide">
+        <img src="./assets/Jogadores/Donelli.png" alt="Jogador 2" class="player-image">
+        <div class="player-name">Jogador 2</div>
+    </div>
+    <div class="slide">
+      <img src="./assets/Jogadores/Donelli.png" alt="Jogador 2" class="player-image">
+      <div class="player-name">Jogador 2</div>
+  </div>
+  <div class="slide">
+    <img src="./assets/Jogadores/Donelli.png" alt="Jogador 2" class="player-image">
+    <div class="player-name">Jogador 2</div>
+</div>
+        <!-- Adicione mais jogadores conforme necessário -->
+    </div>
+    <button class="prev" onclick="moveSlider(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlider(1)">&#10095;</button>
+</div>
+</div>
+
+</script>
 </body>
 </html>
-<script src="./js/elenco.js"></script>
