@@ -12,11 +12,9 @@ function cadastrarTempo(tempo, idusuario) {
 }
 
 function listarTentativa(idusuario){
-    var instrucaoSql = `select tempo from jogoDaMemoria join usuario
-    on usuario.idusuario = jogoDaMemoria.fk_usuario where idusuario = ${idusuario}
-    order by idjogo desc limit 5;`;
+    var instrucaoSql = `
+    select tempo from jogoDaMemoria where fk_usuario = ${idusuario} order by idjogo desc limit 5;`;
 
-    
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }

@@ -17,7 +17,7 @@
     <header>
         <img src="./assets/imgs/Corinthians.webp" alt="Corinthians Logo" class="logo">
         <span class="player">Username:<p id="nome"></p></span>
-        <span class="time">Tempo Record:<p id="tempo"></p></span>
+        <span class="time">Tempo Record:<p id="tempo"></p>segundos</span>
     </header>
 
     <nav class="menu-lateral">
@@ -164,9 +164,9 @@
         }
     });
 
-    let idUsuario =  sessionStorage.ID_USUARIO 
+    let idusuario =  sessionStorage.ID_USUARIO 
 
-    function listarTentativa(idUsuario) {
+    function listarTentativa(idusuario) {
         let novosDados;
 
         fetch(`/medidas/listarTentativa`, {
@@ -175,7 +175,7 @@
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                idusuarioServer: idUsuario
+                idusuarioServer: idusuario
             }),
         })
             .then(function (resultado) {
@@ -186,9 +186,6 @@
             });
         }
             })
-            .catch(function (resultado){
-                console.log(`#ERRO: ${resultado}`)
-            });
     }
 
 
@@ -203,8 +200,6 @@
         myChart.update();
     }
     }
-
-    setInterval(listarTentativa(), 3000);
 
     // var ctx2 = document.getElementById('myChart2').getContext('2d');
     // var myChart2 = new Chart(ctx2, {

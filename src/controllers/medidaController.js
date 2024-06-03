@@ -38,7 +38,7 @@ function cadastrarTempo(req, res) {
 
 function listarTentativa(req, res) {
     var idusuario = req.body.idusuarioServer;
-    console.log(idusuario)
+    
 
     medidaModel.listarTentativa(idusuario).then(function (resultado) {
         if (resultado.length > 0) {
@@ -96,5 +96,4 @@ module.exports = {
     buscarMedidasEmTempoReal,
     cadastrarTempo,
     listarTentativa
-
 }
