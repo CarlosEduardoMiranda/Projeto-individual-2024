@@ -19,5 +19,9 @@ router.post(`/listarTentativa`, function(req, res){
     medidaController.listarTentativa(req, res);
 });  
 
+router.get(`/obterRanking`, function(req, res){
+    medidaController.obterRanking(req, res);
+})
+
 
 module.exports = router;

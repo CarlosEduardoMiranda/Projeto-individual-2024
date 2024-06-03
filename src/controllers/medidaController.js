@@ -17,24 +17,18 @@ function cadastrarTempo(req, res) {
             });
 }
 
-// function listarTentativa(req, res) {
-//     var idusuario = req.body.idusuarioServer;
-//     medidaModel.listarTentativa(idusuario)
-//         .then(
-//             function (resultado) {
-//                 if (resultado.length > 0) {
-//                     res.status(200).json(resultado);
-//                     console.log(resultado.json())
-//                 } else {
-//                     res.status(204).send(resultado);
-//                 }
-//             }
-//         ).catch(function (erro){
-//             console.log(erro);
-//             console.log("Houve um erro ao buscar os avisos: ", erro.sqlMessage);
-//             res.status(500).json(erro.sqlMessage);
-//         });
-// }
+function obterRanking(req, res){
+    medidaModel.obterRanking()
+        .then(
+            function (resultado) {
+                res.json(resultado)
+            }).catch(function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao buscar os avisos: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            });
+}
+
 
 function listarTentativa(req, res) {
     var idusuario = req.body.idusuarioServer;
@@ -95,5 +89,6 @@ module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
     cadastrarTempo,
-    listarTentativa
+    listarTentativa,
+    obterRanking
 }

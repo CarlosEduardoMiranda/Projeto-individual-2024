@@ -11,6 +11,16 @@ function cadastrarTempo(tempo, idusuario) {
     return database.executar(instrucaoSql);
 }
 
+function obterRanking(){
+    var instrucaoSql = `
+    SELECT MIN(j.tempo) AS tempo, u.username FROM
+		usuario AS u JOIN jogoDaMemoria AS j ON
+			j.fk_usuario = u.idusuario GROUP BY
+					u.idusuario, u.username ORDER BY tempo LIMIT 10;`;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 function listarTentativa(idusuario){
     var instrucaoSql = `
     select tempo from jogoDaMemoria where fk_usuario = ${idusuario} order by idjogo desc limit 5;`;
@@ -53,5 +63,6 @@ module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
     cadastrarTempo,
-    listarTentativa
+    listarTentativa,
+    obterRanking
 }
