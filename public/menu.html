@@ -17,7 +17,7 @@
     <header>
         <img src="./assets/imgs/Corinthians.webp" alt="Corinthians Logo" class="logo">
         <span class="player">Username:<p id="nome"></p></span>
-        <span class="time">Tempo Record:<p id="tempo"></p>segundos</span>
+        <span class="time">Tempo Recorde:<p id="tempo"></p>segundos</span>
     </header>
 
     <nav class="menu-lateral">
@@ -66,6 +66,7 @@
                         <li><span class="rank-position">3.</span> <span class="rank-time"></span></li>
                         <li><span class="rank-position">4.</span> <span class="rank-time"></span></li>
                         <li><span class="rank-position">5.</span> <span class="rank-time"></span></li>
+                        <li><span class="rank-position">6.</span> <span class="rank-time"></span></li>
                         <li><span class="rank-position">7.</span> <span class="rank-time"></span></li>
                         <li><span class="rank-position">8.</span> <span class="rank-time"></span></li>
                         <li><span class="rank-position">9.</span> <span class="rank-time"></span></li>
@@ -78,7 +79,7 @@
                     <div class="container-estatística">
                         <div class="card-estatística">
                             <h3>Posição no Ranking Atual</h3>
-                            <p>Você está atualmente na posição: <strong>5</strong></p>
+                            <p>Você está atualmente na posição: <strong id="posicao_ranking">5</strong></p>
                         </div>
                     </div>
 
@@ -86,7 +87,7 @@
                     <div class="container-estatística">
                         <div class="card-estatística">
                             <h3>Média de Tempo</h3>
-                            <p>Sua média de tempo é: <strong>2m 30s</strong></p>
+                            <p>Sua média de tempo é: <strong id="media_tempo">2m 30s</strong></p>
                         </div>
                     </div>
                 </div>
@@ -141,12 +142,17 @@
 
     function plotarRanking(resultado){
         const listItems = document.querySelectorAll('#ranking-list li');
-
+        let posicaoNoRanking = 0 
         // Itera sobre os dados e preenche os elementos li
         for (let i = 0; i < resultado.length; i++) {
+        posicaoNoRanking += 1 
         if (i < listItems.length) {
         const listItem = listItems[i];
         listItem.querySelector('.rank-time').textContent = `${resultado[i].username} - ${resultado[i].tempo}s `;
+        if (resultado[i].username == sessionStorage.getItem('USERNAME_USUARIO')) {
+            console.log(posicaoNoRanking)
+            document.getElementById('posicao_ranking').innerHTML = posicaoNoRanking
+        }
     }
 }
     }
@@ -212,6 +218,8 @@
             })
     }
 
+    let somaTempo = 0;
+    let mediaTempo = 0;
 
     function atualizarGrafico(resultado){
         myChart.data.datasets[0].data = []
@@ -219,12 +227,18 @@
         for (var posicao = 0; posicao < resultado.length; posicao++) {
         let UltimoDado = resultado[posicao];
         console.log(UltimoDado.tempo)
+        somaTempo += UltimoDado.tempo
         myChart.data.datasets[0].data.push(UltimoDado.tempo);
         myChart.data.labels.push(`Tentativa  ${posicao + 1}`);
         myChart.update();
+        mediaTempo = somaTempo / resultado.length;
     }
+    document.getElementById('media_tempo').innerHTML = `${Math.floor(mediaTempo / 60)}m ${Math.floor(mediaTempo % 60)}s`;
+
+    
     }
 
+   
     // var ctx2 = document.getElementById('myChart2').getContext('2d');
     // var myChart2 = new Chart(ctx2, {
     //     type: 'line',

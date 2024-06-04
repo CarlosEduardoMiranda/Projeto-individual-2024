@@ -136,7 +136,6 @@ const startTimer = () => {
     let currentTime = 0
 
 window.onload = () => { 
-  spanPlayer.innerHTML = localStorage.getItem('player'); // Define o nome do jogador com base no valor armazenado no localStorage
   startTimer();
   loadGame(); 
 }
