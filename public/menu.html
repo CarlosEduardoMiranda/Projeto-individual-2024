@@ -121,7 +121,10 @@
 
     let tempoRecord = sessionStorage.getItem('TEMPO_USUARIO')
     const addtempo = document.getElementById('tempo')
-    addtempo.innerHTML = tempoRecord
+    if(tempoRecord == 'null'){
+        tempoRecord = 0;
+    }
+    addtempo.innerHTML = `<b>${tempoRecord}</b>`;
 
     obterRanking();
     
