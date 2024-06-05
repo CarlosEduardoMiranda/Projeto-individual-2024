@@ -1,5 +1,4 @@
 const grid = document.querySelector('.grid'); 
-const spanPlayer = document.querySelector('.player'); 
 const timer = document.querySelector('.timer'); 
 
 const characters = [ 
@@ -41,21 +40,21 @@ function cadastrarTempo() {
       })
 }
 
-
+// Cria um novo elemento HTML com a tag fornecida
 const createElement = (tag, className) => { 
-  const element = document.createElement(tag); // Cria um novo elemento HTML com a tag fornecida
+  const element = document.createElement(tag); 
   element.className = className;
   return element; 
 }
 
-let firstCard = ''; // Variável para armazenar a primeira carta virada
-let secondCard = ''; // Variável para armazenar a segunda carta virada
+let firstCard = ''; 
+let secondCard = ''; 
 
-const checkEndGame = () => { // Função para verificar se o jogo acabou
-  const disabledCards = document.querySelectorAll('.disabled-card'); // Seleciona todas as cartas desativadas
+const checkEndGame = () => { 
+  const disabledCards = document.querySelectorAll('.disabled-card'); 
 
-  if (disabledCards.length === 20) { // Se todas as cartas estiverem desativadas (total de 20)
-    clearInterval(this.loop); // Para o contador de tempo
+  if (disabledCards.length === 20) { 
+    clearInterval(this.loop); 
     alert(`Parabéns,! Seu tempo foi de: ${timer.innerHTML} segundos.`); 
     cadastrarTempo();
   }
@@ -69,18 +68,18 @@ const checkCards = () => { //checka pelo nome das cartas//
     firstCard.firstChild.classList.add('disabled-card'); 
     secondCard.firstChild.classList.add('disabled-card');
 
-    firstCard = ''; // Reseta a primeira carta
-    secondCard = ''; // Reseta a segunda carta
+    firstCard = ''; 
+    secondCard = ''; 
 
     checkEndGame(); // Verifica se o jogo acabou
   } else {
-    setTimeout(() => { // Se os nomes dos personagens não forem iguais, após 500ms
-      // Remove a classe 'reveal-card' para esconder as cartas
+    setTimeout(() => { 
+      // Remove 
       firstCard.classList.remove('reveal-card'); 
       secondCard.classList.remove('reveal-card');
 
-      firstCard = ''; // Reseta a primeira carta
-      secondCard = ''; // Reseta a segunda carta
+      firstCard = ''; 
+      secondCard = ''; 
     }, 500);
   }
 }
@@ -110,8 +109,8 @@ const createCard = (character) => { // Função para criar uma carta
   card.appendChild(front); // Adiciona a parte da frente da carta ao elemento da carta
   card.appendChild(back); // Adiciona a parte de trás da carta ao elemento da carta
 
-  card.addEventListener('click', revealCard); // Adiciona um evento de clique para revelar a carta
-  card.setAttribute('data-character', character) // Define o nome do personagem como um atributo da carta
+  card.addEventListener('click', revealCard);
+  card.setAttribute('data-character', character) // atributo da carta
 
   return card; 
 }
