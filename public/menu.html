@@ -225,11 +225,13 @@
     let mediaTempo = 0;
 
     function atualizarGrafico(resultado){
+        console.log(resultado)
         myChart.data.datasets[0].data = []
         myChart.data.labels = []
         for (var posicao = 0; posicao < resultado.length; posicao++) {
         let UltimoDado = resultado[posicao];
-        console.log(UltimoDado.tempo)
+        let ultimoTempo = UltimoDado.tempo
+        console.log(ultimoTempo)
         somaTempo += UltimoDado.tempo
         myChart.data.datasets[0].data.push(UltimoDado.tempo);
         myChart.data.labels.push(`Tentativa  ${posicao + 1}`);

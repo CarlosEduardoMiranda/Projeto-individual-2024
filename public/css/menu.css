@@ -128,7 +128,7 @@ ul li.item-menu a .icon > i{
     margin: 10px;
     box-shadow: 0 2px 25px rgb(234, 9, 9);
     /* margin-left: 100px; */
-    
+
 }
 .container {
     display: flex;
@@ -253,10 +253,10 @@ ul li.item-menu a .icon > i{
 }
 
 .card {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(255, 0, 0);
 }
 
 /* Ajuste para alinhar as estatísticas à altura dos gráficos */

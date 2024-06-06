@@ -71,7 +71,7 @@ const checkCards = () => { //checka pelo nome das cartas//
     firstCard = ''; 
     secondCard = ''; 
 
-    checkEndGame(); // Verifica se o jogo acabou
+    checkEndGame(); 
   } else {
     setTimeout(() => { 
       // Remove 
@@ -84,45 +84,46 @@ const checkCards = () => { //checka pelo nome das cartas//
   }
 }
 
-const revealCard = ({ target }) => { // Função para revelar uma carta ao clicar nela
-  if (target.parentNode.className.includes('reveal-card')) { // Se a carta já estiver revelada
-    return; // Não faz nada
+const revealCard = ({ target }) => { // arrow function
+  if (target.parentNode.className.includes('reveal-card')) { 
+    return; 
   }
-
-  if (firstCard === '') { // Se a primeira carta estiver vazia
+  // vazio
+  if (firstCard === '') { 
     target.parentNode.classList.add('reveal-card'); // Adiciona a classe 'reveal-card' para revelar a carta
     firstCard = target.parentNode; 
-  } else if (secondCard === '') { // Se a segunda carta estiver vazia
-    target.parentNode.classList.add('reveal-card'); // Adiciona a classe 'reveal-card' para revelar a carta
+  } else if (secondCard === '') { 
+    target.parentNode.classList.add('reveal-card'); 
     secondCard = target.parentNode; 
-    checkCards(); // Verifica se as duas cartas viradas são iguais
+    checkCards(); 
   }
 }
 
-const createCard = (character) => { // Função para criar uma carta
-  const card = createElement('div', 'card'); // Cria um elemento div com a classe 'card'
-  const front = createElement('div', 'face front'); // Cria um elemento div com a classe 'face front' (parte da frente da carta)
-  const back = createElement('div', 'face back'); // Cria um elemento div com a classe 'face back' (parte de trás da carta)
+const createCard = (character) => { 
+  const card = createElement('div', 'card'); 
+  const front = createElement('div', 'face front'); 
+  const back = createElement('div', 'face back'); 
 
-  front.style.backgroundImage = `url('./assets/Jogadores/${character}.png')`; // Define a imagem de fundo da parte da frente da carta
+  front.style.backgroundImage = `url('./assets/Jogadores/${character}.png')`; 
 
-  card.appendChild(front); // Adiciona a parte da frente da carta ao elemento da carta
-  card.appendChild(back); // Adiciona a parte de trás da carta ao elemento da carta
+  card.appendChild(front); 
+  card.appendChild(back); 
 
   card.addEventListener('click', revealCard);
-  card.setAttribute('data-character', character) // atributo da carta
+  card.setAttribute('data-character', character) 
 
   return card; 
 }
 
 const loadGame = () => { // Função para carregar o jogo
-  const duplicateCharacters = [...characters, ...characters]; // Duplica os personagens para criar pares
+  const duplicateCharacters = [...characters, ...characters]; 
 
-  const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5); // Embaralha os personagens
+  const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5); 
 
   shuffledArray.forEach((character) => { 
     const card = createCard(character);
     grid.appendChild(card); 
+    // exibição
   });
 }
 
